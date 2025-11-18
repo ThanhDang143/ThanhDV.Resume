@@ -1,0 +1,96 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f3f4f6;
+}
+.cv-container {
+    max-width: 1024px;
+}
+/* Mobile layout - control order within main and aside */
+@media (max-width: 767px) {
+    main, aside {
+        display: flex;
+        flex-direction: column;
+    }
+    main .order-1 { order: 1; }
+    main .order-2 { order: 2; }
+    main .order-3 { order: 3; }
+    main .order-4 { order: 4; }
+    main .order-5 { order: 5; }
+    aside .order-6 { order: 6; }
+}
+.section-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #0369a1;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #e2e8f0;
+    margin-bottom: 1.5rem;
+}
+a {
+    color: #2563eb;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+a:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+.controls { max-width: 1024px; }
+@media print {
+    body { background-color: #fff; }
+    .controls { display: none !important; }
+    .cv-container { 
+        box-shadow: none !important; 
+        margin: 0; 
+        max-width: 100%;
+        padding-top: 1rem !important;
+    }
+}
+
+#download-btn {
+    background-color: #0369a1;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+#download-btn:hover {
+    background-color: #02537a;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+#print-btn {
+    background-color: #16a34a;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+#print-btn:hover {
+    background-color: #15803d;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.pdf-generating .skill-wrapper-for-pdf {
+    display: block !important;
+}
+.pdf-generating .skill-wrapper-for-pdf > span {
+    display: inline-block !important;
+    margin: 4px;
+}

@@ -1,0 +1,9 @@
+services:
+  web-cv:
+    image: nginx:alpine
+    container_name: web-cv
+    volumes:
+      - /volume1/docker/Web/cv:/usr/share/nginx/html:ro
+    ports:
+      - "9901:80"
+    restart: unless-stopped
